@@ -1,10 +1,4 @@
-/* ═══════════════════════════════════════════════════════
-   Precision Tools Inc. — style.css
-   Link this AFTER Bootstrap in your index.html:
-   <link rel="stylesheet" href="style.css">
-════════════════════════════════════════════════════════ */
 
-/* ─── CSS Variables ─────────────────────────────────────── */
 :root {
   --steel:   #0d1b2a;
   --iron:    #1b263b;
@@ -351,3 +345,97 @@ footer a:hover { color: var(--rust); }
   cursor: pointer;
 }
 #backTop.show { opacity: 1; pointer-events: auto; }
+
+/* ─── Contact Page — Hero Banner ─────────────────────────── */
+.contact-hero {
+  background: var(--steel);
+  padding: 5rem 0 4rem;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 3px solid var(--rust);
+}
+.contact-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(230,57,70,.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(230,57,70,.07) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.contact-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 6rem);
+  color: var(--white);
+  letter-spacing: 2px;
+  line-height: 1;
+  position: relative;
+}
+.contact-hero-title span { color: var(--rust); }
+.contact-hero-sub {
+  color: var(--silver);
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  position: relative;
+}
+
+/* ─── Contact Page — Info Box ────────────────────────────── */
+.contact-info-box {
+  background: var(--white);
+  padding: 2rem;
+  border-top: 4px solid var(--rust);
+  box-shadow: 0 4px 20px rgba(0,0,0,.07);
+  height: 100%;
+}
+.contact-box-title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  color: var(--steel);
+  margin-bottom: 0.5rem;
+}
+.contact-social-link {
+  color: var(--silver);
+  transition: color .2s;
+}
+.contact-social-link:hover { color: var(--rust); }
+
+/* ─── Contact Page — Form Box ────────────────────────────── */
+.contact-form-box {
+  background: var(--white);
+  padding: 2.5rem;
+  border-top: 4px solid var(--rust);
+  box-shadow: 0 4px 20px rgba(0,0,0,.07);
+}
+.form-box-title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  color: var(--steel);
+}
+
+/* ─── Contact Page — Map ─────────────────────────────────── */
+.map-wrap {
+  border: 3px solid var(--rust);
+  overflow: hidden;
+}
+
+/* ─── CTA Banner (index.html bottom) ────────────────────── */
+.cta-banner {
+  background: var(--rust);
+  padding: 2.5rem 3rem;
+}
+.cta-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: var(--white);
+  margin-bottom: .4rem;
+}
+.cta-sub { color: rgba(255,255,255,.85); font-size: 1rem; }
+.cta-banner .btn-rust {
+  background: var(--white);
+  color: var(--rust);
+  display: inline-block;
+  text-decoration: none;
+}
+.cta-banner .btn-rust:hover { background: var(--steel); color: var(--white); transform: translateY(-2px); }
