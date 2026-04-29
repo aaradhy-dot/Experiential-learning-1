@@ -155,7 +155,6 @@ section { scroll-margin-top: var(--nav-h); }
 }
 .hero-stat .lbl { font-size: .8rem; color: var(--silver); letter-spacing: 2px; text-transform: uppercase; }
 
-/* ─── Section Titles ─────────────────────────────────────── */
 .section-tag {
   font-size: .8rem;
   letter-spacing: 4px;
@@ -204,7 +203,6 @@ section { scroll-margin-top: var(--nav-h); }
   flex-shrink: 0;
 }
 
-/* ─── Services ───────────────────────────────────────────── */
 #services { background: var(--light); }
 .service-card {
   background: var(--white);
@@ -337,8 +335,6 @@ footer a:hover { color: var(--rust); }
   cursor: pointer;
 }
 #backTop.show { opacity: 1; pointer-events: auto; }
-
-/* ─── Contact Page — Hero Banner ─────────────────────────── */
 .contact-hero {
   background: var(--steel);
   padding: 5rem 0 4rem;
@@ -370,7 +366,6 @@ footer a:hover { color: var(--rust); }
   position: relative;
 }
 
-/* ─── Contact Page — Info Box ────────────────────────────── */
 .contact-info-box {
   background: var(--white);
   padding: 2rem;
@@ -404,13 +399,10 @@ footer a:hover { color: var(--rust); }
   color: var(--steel);
 }
 
-/* ─── Contact Page — Map ─────────────────────────────────── */
 .map-wrap {
   border: 3px solid var(--rust);
   overflow: hidden;
 }
-
-/* ─── CTA Banner (index.html bottom) ────────────────────── */
 .cta-banner {
   background: var(--rust);
   padding: 2.5rem 3rem;
