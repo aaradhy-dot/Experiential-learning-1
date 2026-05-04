@@ -39,11 +39,13 @@ function validateForm() {
   let error = document.getElementById("error");
 
   if (name == "" || email == "" || phone == "" || message == "") {
+    error.style.color = "red";
     error.innerHTML = "Please fill all fields.";
     return false;
   }
 
   if (phone.length != 10) {
+    error.style.color = "red";
     error.innerHTML = "Phone number must be 10 digits.";
     return false;
   }
