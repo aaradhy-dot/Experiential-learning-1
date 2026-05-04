@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Precision Tools</title>
+  <title>Precision Tools Inc.</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -9,79 +9,114 @@
 <header>
   <div class="logo">Precision<span>Tools</span></div>
   <nav>
-    <a href="#">Home</a>
+    <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="#team">Team</a>
-    <a href="contact.html">Contact</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<section class="hero">
-  <div class="hero-text">
-    <h1>Quality Tools for Modern Industries</h1>
-    <p>
-      Precision Tools is a trusted industrial tool company based in Pune.
-      We make strong, durable and reliable tools for factories and workshops.
-    </p>
-    <a href="contact.html" class="btn">Contact Us</a>
+<section class="slider" id="home">
+  <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1400');">
+    <div class="slide-content">
+      <h1>Precision Tools for Modern Industry</h1>
+      <p>We manufacture strong, accurate and reliable tools for industrial use.</p>
+      <a href="#contact" class="btn">Get a Quote</a>
+    </div>
   </div>
+
+  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1400');">
+    <div class="slide-content">
+      <h1>Quality Manufacturing Solutions</h1>
+      <p>Our tools are designed for performance, durability and long life.</p>
+      <a href="#services" class="btn">View Services</a>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=1400');">
+    <div class="slide-content">
+      <h1>Built With Accuracy</h1>
+      <p>Trusted by factories, workshops and local industries since 1994.</p>
+      <a href="#about" class="btn">Know More</a>
+    </div>
+  </div>
+
+  <button class="arrow left" onclick="prevSlide()">❮</button>
+  <button class="arrow right" onclick="nextSlide()">❯</button>
 </section>
 
-<section id="about" class="section">
-  <h2>About Us</h2>
+<section class="about" id="about">
+  <h2>About Precision Tools Inc.</h2>
   <p>
-    Precision Tools started in 1994 with a small team and a simple goal:
-    to provide good quality tools at reasonable prices. Today, we serve many
-    industries with products that are tested carefully before delivery.
+    Precision Tools Inc. is a local manufacturing company based in Pune.
+    We provide industrial tools, CNC machining support and repair services.
+    Our main focus is quality, timely delivery and customer satisfaction.
   </p>
 </section>
 
-<section id="services" class="section">
+<section class="services" id="services">
   <h2>Our Services</h2>
 
-  <div class="cards">
-    <div class="card">
+  <div class="service-box">
+    <div class="service-card">
       <h3>Tool Manufacturing</h3>
-      <p>We manufacture industrial tools for different company needs.</p>
+      <p>We design and manufacture industrial tools for factories and workshops.</p>
     </div>
 
-    <div class="card">
+    <div class="service-card">
       <h3>CNC Machining</h3>
-      <p>We provide accurate machining services for metal parts.</p>
+      <p>We provide accurate machining service for metal and machine parts.</p>
     </div>
 
-    <div class="card">
+    <div class="service-card">
       <h3>Tool Repair</h3>
-      <p>We repair and maintain old tools to increase their life.</p>
+      <p>We repair old tools and improve their working life and performance.</p>
     </div>
   </div>
 </section>
 
-<section id="team" class="section dark">
-  <h2>Our Team</h2>
+<section class="team" id="team">
+  <h2>Meet the Team</h2>
 
-  <div class="cards">
-    <div class="card">
+  <div class="team-box">
+    <div class="team-card">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg">
       <h3>Rajesh Mehta</h3>
-      <p>Founder</p>
+      <p>Founder & CEO</p>
     </div>
 
-    <div class="card">
+    <div class="team-card">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg">
       <h3>Priya Sharma</h3>
-      <p>Engineer</p>
+      <p>Production Engineer</p>
     </div>
 
-    <div class="card">
+    <div class="team-card">
+      <img src="https://randomuser.me/api/portraits/men/65.jpg">
       <h3>Vikram Patil</h3>
       <p>Quality Manager</p>
     </div>
   </div>
 </section>
 
+<section class="contact" id="contact">
+  <h2>Contact Us</h2>
+
+  <form onsubmit="return validateForm()">
+    <input type="text" id="name" placeholder="Enter your name">
+    <input type="email" id="email" placeholder="Enter your email">
+    <input type="text" id="phone" placeholder="Enter phone number">
+    <textarea id="message" placeholder="Write your message"></textarea>
+    <button type="submit">Send Message</button>
+    <p id="error"></p>
+  </form>
+</section>
+
 <footer>
-  <p>© 2025 Precision Tools | Designed by Student</p>
+  <p>© 2025 Precision Tools Inc. | Pune, Maharashtra</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
