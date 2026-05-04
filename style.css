@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, sans-serif;
   background: #f5f7fa;
@@ -35,7 +39,7 @@ header {
 nav a {
   color: white;
   text-decoration: none;
-  margin-left: 25px;
+  margin-left: 22px;
   font-size: 15px;
 }
 
@@ -97,10 +101,6 @@ nav a:hover {
   font-weight: bold;
 }
 
-.btn:hover {
-  background: #c91f1f;
-}
-
 .arrow {
   position: absolute;
   top: 50%;
@@ -119,32 +119,32 @@ nav a:hover {
   right: 20px;
 }
 
-.about, .services, .team, .contact {
+.about, .services, .products, .team, .contact {
   padding: 70px 60px;
   text-align: center;
 }
 
-.about h2, .services h2, .team h2, .contact h2 {
+.about h2, .services h2, .products h2, .team h2, .contact h2 {
   font-size: 36px;
   margin-bottom: 20px;
   color: #0b1320;
 }
 
-.about p {
+.about p, .product-text {
   max-width: 850px;
   margin: auto;
   font-size: 17px;
   line-height: 1.8;
 }
 
-.service-box, .team-box {
+.service-box, .product-box, .team-box {
   display: flex;
   justify-content: center;
   gap: 30px;
   margin-top: 35px;
 }
 
-.service-card, .team-card {
+.service-card, .product-card, .team-card {
   width: 300px;
   background: white;
   padding: 30px;
@@ -153,7 +153,7 @@ nav a:hover {
   transition: 0.3s;
 }
 
-.service-card:hover, .team-card:hover {
+.service-card:hover, .product-card:hover, .team-card:hover {
   transform: translateY(-8px);
 }
 
@@ -162,8 +162,40 @@ nav a:hover {
   margin-bottom: 12px;
 }
 
-.service-card p {
+.product-card {
+  padding: 0 0 25px;
+  overflow: hidden;
+}
+
+.product-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  color: #ff3b3b;
+  margin: 18px 0 10px;
+}
+
+.product-card p {
+  padding: 0 20px;
   line-height: 1.6;
+  font-size: 15px;
+}
+
+.buy-btn {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 11px 22px;
+  background: #0b1320;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.buy-btn:hover {
+  background: #ff3b3b;
 }
 
 .team {
@@ -179,16 +211,15 @@ nav a:hover {
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 15px;
 }
 
 .team-card h3 {
+  margin-top: 15px;
   color: #0b1320;
 }
 
 .team-card p {
   color: #666;
-  margin-top: 8px;
 }
 
 form {
@@ -206,7 +237,6 @@ input, textarea {
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 15px;
 }
 
 textarea {
@@ -222,10 +252,6 @@ form button {
   font-size: 16px;
   border-radius: 6px;
   cursor: pointer;
-}
-
-form button:hover {
-  background: #c91f1f;
 }
 
 #error {
@@ -252,8 +278,8 @@ footer {
   }
 
   nav a {
-    margin: 8px;
     display: inline-block;
+    margin: 8px;
   }
 
   .slide-content {
@@ -265,12 +291,12 @@ footer {
     font-size: 36px;
   }
 
-  .service-box, .team-box {
+  .service-box, .product-box, .team-box {
     flex-direction: column;
     align-items: center;
   }
 
-  .about, .services, .team, .contact {
+  .about, .services, .products, .team, .contact {
     padding: 50px 20px;
   }
 }
